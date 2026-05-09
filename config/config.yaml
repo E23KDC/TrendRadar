@@ -344,6 +344,7 @@ notification:
     bark:
       url: ""                         # Bark 推送 URL（格式：https://api.day.app/your_device_key）
 
+
     slack:
       webhook_url: ""                 # Slack Incoming Webhook URL
 
@@ -352,6 +353,10 @@ notification:
       payload_template: ""            # JSON 模板，支持 {title} 和 {content} 占位符
                                       # 示例：{"content": "{content}"}
                                       # 留空则使用默认格式：{"title": "{title}", "content": "{content}"}
+    
+    generic_webhook:
+      webhook_url: "https://www.pushplus.plus/send"
+      payload_template: '{"token": "493e6fbfa8774f83ae4c96e23bb85f9c", "title": "{title}", "content": "{content}", "topic": "", "template": "markdown"}'
 
 
 # ===============================================================
